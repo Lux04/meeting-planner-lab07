@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class Organization {
 	/** This class is used to initialize and store a list of employees
-	 * and rooms available for meetings. 
-	 * 
+	 * and rooms available for meetings.
+	 *
 	 *  It gets a bunch of initialization code out of the PlannerInterface.
 	 */
-	
+
 	private ArrayList<Person> employees;
 	private ArrayList<Room> rooms;
 
@@ -22,7 +22,7 @@ public class Organization {
 		employees.add(new Person("John Rose"));
 		employees.add(new Person("Ryan Austin"));
 		employees.add(new Person("Csilla Farkas"));
-		
+
 		rooms = new ArrayList<Room>();
 		rooms.add(new Room("2A01"));
 		rooms.add(new Room("2A02"));
@@ -30,7 +30,7 @@ public class Organization {
 		rooms.add(new Room("2A04"));
 		rooms.add(new Room("2A05"));
 	}
-	
+
 	public ArrayList<Person> getEmployees() {
 		return employees;
 	}
@@ -38,7 +38,7 @@ public class Organization {
 	public ArrayList<Room> getRooms() {
 		return rooms;
 	}
-	
+
 	/**
 	 * Search for and retrieve a room.
 	 * @param ID - ID of the room to retrieve.
@@ -53,10 +53,10 @@ public class Organization {
 				return room;
 			}
 		}
-		
+
 		throw new Exception("Requested room does not exist");
 	}
-	
+
 	/**
 	 * Search for and retrieve a person.
 	 * @param name - The name of the person to retrieve.
@@ -71,7 +71,7 @@ public class Organization {
 				return employee;
 			}
 		}
-		
+
 		throw new Exception("Requested employee does not exist");
 	}
 }

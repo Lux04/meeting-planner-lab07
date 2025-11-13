@@ -7,16 +7,16 @@ public class Meeting {
 	private int day;
 	private int start;
 	private int end;
-	private ArrayList<Person> attendees; 
+	private ArrayList<Person> attendees;
 	private Room room;
 	private String description;
-	
+
 	/**
 	 * Default constructor
 	 */
 	public Meeting(){
 	}
-	
+
 	/**
 	 * Constructor that can be used to block off a whole day -
 	 * such as for a vacation
@@ -29,7 +29,7 @@ public class Meeting {
 		this.start=0;
 		this.end=23;
 	}
-	
+
 	/**
 	 * Constructor that can be used to block off a whole day -
 	 * such as for a vacation
@@ -44,7 +44,7 @@ public class Meeting {
 		this.end=23;
 		this.description= description;
 	}
-	
+
 	/**
 	 * More detailed constructor
 	 * @param month - The month of the meeting (1-12).
@@ -58,7 +58,7 @@ public class Meeting {
 		this.start=start;
 		this.end=end;
 	}
-	
+
 	/**
 	 * More detailed constructor
 	 * @param month - The month of the meeting (1-12).
@@ -86,7 +86,7 @@ public class Meeting {
 	public void addAttendee(Person attendee) {
 		this.attendees.add(attendee);
 	}
-	
+
 	/**
 	 * Removes an attendee from the meeting.
 	 * @param attendee - The person to remove.
@@ -94,27 +94,27 @@ public class Meeting {
 	public void removeAttendee(Person attendee) {
 		this.attendees.remove(attendee);
 	}
-	
+
 	/**
 	 * Returns information about the meeting as a formatted string.
 	 * @return String - Information about the meeting.
 	 */
 	public String toString(){
 		String info=month+"/"+day+", "+start+" - "+end+","+room.getID()+": "+description+"\nAttending: ";
-		
+
 		for(Person attendee : attendees){
 			info=info+attendee.getName()+",";
 		}
-		
+
 		info=info.substring(0,info.length()-1);
-		
+
 		return info;
 	}
-	
+
 	/**
 	 * Getters and Setters
 	 */
-	
+
 	public int getMonth() {
 		return month;
 	}
@@ -158,7 +158,7 @@ public class Meeting {
 	public void setRoom(Room room) {
 		this.room = room;
 	}
-	
+
 	public String getDescription() {
 		return description;
 	}
